@@ -10,6 +10,9 @@ cd ~ && sudo pacman -S --needed git base-devel && git clone https://aur.archlinu
 sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep
 yay -S zen-browser-bin
 
+# fonts
+sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd
+
 # build and install neovim
 cd ~
 sudo pacman -S base-devel cmake unzip ninja curl
