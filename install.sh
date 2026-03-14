@@ -53,7 +53,7 @@ nvm install 24
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # man setup
-sudo pacman -S man-db
+sudo pacman -S man-db man-pages
 sudo mandb
 
 # cleanup
