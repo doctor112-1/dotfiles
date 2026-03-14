@@ -1,0 +1,11 @@
+*, pre {
+    font-family: "Pragmasevka Nerd Font" !important;
+    font-size: 1em;
+}
+
+@-moz-document url-prefix("https://web.whatsapp.com/") {
+span {
+    font-family: "Pragmasevka Nerd Font";
+    font-size: 1.1rem;
+}
+}

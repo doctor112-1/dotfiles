@@ -63,8 +63,15 @@ sudo mv -v catppuccin-mocha-flamingo /usr/share/sddm/themes
 echo "[Theme]
 Current=catppuccin-mocha-flamingo" | sudo tee /etc/sddm.conf
 
+# install pragmasevka
+wget https://github.com/shytikov/pragmasevka/releases/download/v1.7.0/Pragmasevka_NF.zip
+unzip Pragmasevka_NF.zip
+sudo mkdir -p /usr/local/share/fonts/ttf/Pragmasevka
+sudo mv *.ttf /usr/local/share/fonts/ttf/Pragmasevka
+fc-cache
+
 # cleanup
-rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz ~/catppuccin-mocha-flamingo-sddm.zip
+rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz ~/catppuccin-mocha-flamingo-sddm.zip ~/Pragmasevka_NF.zip
 
 # enable sddm
 sudo systemctl enable sddm.service
