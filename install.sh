@@ -52,6 +52,10 @@ nvm install 24
 # install pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
+# man setup
+sudo pacman -S man-db
+sudo mandb
+
 # cleanup
 rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz
 
