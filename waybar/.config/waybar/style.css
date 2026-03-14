@@ -1,133 +1,90 @@
-* {
-  border: none;
-  border-radius: 0;
-  min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 13px;
-}
+@import "mocha.css";
 
 window#waybar {
   background-color: transparent;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-}
-
-window#waybar.hidden {
-  opacity: 0.5;
 }
 
 #workspaces {
-  background-color: transparent;
+  border-radius: 1rem;
+  padding-right: 1px;
+  background-color: @base;
 }
 
 #workspaces button {
-  all: initial;
-  /* Remove GTK theme values (waybar #1351) */
-  min-width: 0;
-  /* Fix weird spacing in materia (waybar #450) */
-  box-shadow: inset 0 -3px transparent;
-  /* Use box-shadow instead of border so the text isn't offset */
-  padding: 6px 18px;
-  margin: 6px 3px;
-  border-radius: 4px;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  color: @text;
+  padding: 0.4rem;
 }
 
 #workspaces button.active {
-  color: #1e1e2e;
-  background-color: #cdd6f4;
+  color: @flamingo;
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
-  color: #1e1e2e;
-  background-color: #cdd6f4;
+  color: @flamingo;
 }
 
-#workspaces button.urgent {
-  background-color: #f38ba8;
+#custom-music {
+  margin: 5px;
+  padding: 0.4rem;
+  padding-right: 10px;
+  background-color: @base;
+  color: @text;
+  font-family: "Jetbrains Mono Extra Bold";
 }
 
-#memory,
-#custom-power,
-#battery,
-#backlight,
-#wireplumber,
-#network,
-#clock,
-#tray {
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding: 6px 12px;
-  background-color: #1e1e2e;
-  color: #181825;
+.modules-left {
+  background-color: @base;
+  border-radius: 1rem;
+  margin: 5px;
+  margin-left: 4px;
 }
 
-#custom-power {
-  margin-right: 6px;
+
+#clock {
+  color: @text;
+  font-family: "Jetbrains Mono Extra Bold";
+  background-color: @base;
+  border-radius: 1rem;
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-#custom-logo {
-  padding-right: 7px;
-  padding-left: 7px;
-  margin-left: 5px;
-  font-size: 15px;
-  border-radius: 8px 0px 0px 8px;
-  color: #1793d1;
-}
-
-#memory {
-  background-color: #fab387;
-}
-
-#battery {
-  background-color: #f38ba8;
-}
-
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-  background-color: #ff0000;
-  color: #FFFF00;
-}
-
-#battery.charging {
-  background-color: #a6e3a1;
-  color: #181825;
-}
-
-#backlight {
-  background-color: #fab387;
-}
-
-#wireplumber {
-  background-color: #f9e2af;
+.modules-right {
+  background-color: @base;
+  border-radius: 1rem;
+  margin: 5px;
+  margin-right: 4px;
 }
 
 #network {
-  background-color: #94e2d5;
-  padding-right: 17px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: @text;
 }
 
-#clock {
-  font-family: JetBrainsMono Nerd Font;
-  background-color: #cba6f7;
+#wireplumber {
+  padding-right: 10px;
+  padding-left: 12px;
+  color: @text;
 }
 
-#custom-power {
-  background-color: #f2cdcd;
+#battery {
+  padding-right: 15px;
+  padding-left: 10px;
+  color: @text;
+  font-family: "Jetbrains Mono Extra Bold";
 }
-
 
 tooltip {
+  font-family: "Jetbrains Mono Extra Bold";
   border-radius: 8px;
   padding: 15px;
   background-color: #131822;
 }
 
 tooltip label {
+  font-family: "Jetbrains Mono Extra Bold";
   padding: 5px;
   background-color: #131822;
 }
