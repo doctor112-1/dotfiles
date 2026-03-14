@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euxo pipefail
+
 # general stuff
 sudo pacman -S curl wget git vim base-devel
 
