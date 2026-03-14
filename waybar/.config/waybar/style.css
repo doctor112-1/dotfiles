@@ -13,6 +13,7 @@ window#waybar {
 #workspaces button {
   color: @text;
   padding: 0.4rem;
+  border: none;
 }
 
 #workspaces button.active {
@@ -21,6 +22,10 @@ window#waybar {
 
 #workspaces button:hover {
   color: @flamingo;
+  box-shadow: none;
+  text-shadow: none;
+  background: none;
+  transition: none;
 }
 
 #custom-music {
