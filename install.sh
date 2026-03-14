@@ -9,7 +9,7 @@ sudo pacman -S curl wget git vim base-devel
 cd ~ && sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
 # install a bunch of stuff
-sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh less wf-recorder
+sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh less wf-recorder go
 yay -S zen-browser-bin
 
 # make folder to store screenshots
