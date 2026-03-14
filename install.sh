@@ -26,19 +26,19 @@ mkdir ~/.config/btop
 mv ~/themes ~/.config/btop
 
 # fonts
-sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd
+sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono
 
 # build and install neovim
 cd ~
 sudo pacman -S base-devel cmake unzip ninja curl
-git clone https://github.com/neovim/neovim
+git clone --depth 1 https://github.com/neovim/neovim
 cd ~/neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 
 # stow dotfiles
 cd ~/dotfiles
-stow ./hypridle ./hyprland ./backgrounds ./hyprlock ./hyprmocha ./hyprpaper ./kitty ./nvim ./rofi ./starship ./waybar
+stow hypridle hyprland backgrounds hyprlock hyprmocha hyprpaper kitty nvim rofi starship waybar openssh
 
 # setup .bashrc
 echo 'eval "$(starship init bash)"' >>~/.bashrc
