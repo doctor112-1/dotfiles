@@ -4,54 +4,58 @@ $accent = $mauve
 $accentAlpha = $mauveAlpha
 $font = JetBrainsMono Nerd Font
 
-
+# GENERAL
 general {
     disable_loading_bar = true
     hide_cursor = true
 }
 
+# BACKGROUND
 background {
     monitor =
-    path = ~/.config/backgrounds/mountain-range.jpg
+    path = ~/.config/backgrounds/arch-black-4k.png
     blur_passes = 2
     color = $base
 }
 
+# TIME
 label {
     monitor =
-    text = $TIME
+    text = cmd[update:30000] echo "$(date +"%R")"
     color = $text
     font_size = 90
     font_family = $font
-    halign = center
+    position = -30, 0
+    halign = right
     valign = top
 }
 
+# DATE 
+label {
+    monitor = 
+    text = cmd[update:43200000] echo "$(date +"%A, %d %B %Y")"
+    color = $text
+    font_size = 25
+    font_family = $font
+    position = -30, -150
+    halign = right
+    valign = top
+}
+
+# USER AVATAR
 
 image {
-  monitor =
-  path =
-  size = 80
-  rounding = 5
-  border_color = $accent
-  reload_time = 1
-  reload_cmd = /home/techgeeks/dotfiles/get_song_image.sh
-  position = -150, 190
-  halign = center
-  valign = center
+    monitor = 
+    path = ~/.face
+    size = 100
+    border_color = $accent
+
+    position = 0, 75
+    halign = center
+    valign = center
 }
 
-label {
-  monitor =
-  text = cmd[update:1000] /home/techgeeks/dotfiles/get_song_title.sh
-  color = $text
-  font_size = 14
-  font_family = JetBrains Mono Nerd Font Mono ExtraBold
-  position = 880, 190
-  halign = left
-  valign = center
-}
-
+# INPUT FIELD
 input-field {
     monitor =
     size = 300, 60
@@ -73,5 +77,3 @@ input-field {
     halign = center
     valign = center
 }
-
-#playerctl metadata --format "{{ artist }} - {{ title }}"
