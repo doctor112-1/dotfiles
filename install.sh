@@ -9,7 +9,7 @@ sudo pacman -S curl wget git vim base-devel
 cd ~ && sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
 # install a bunch of stuff
-sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh less wf-recorder go
+sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh less wf-recorder go qt6-svg qt6-declarative qt5-quickcontrols2
 yay -S zen-browser-bin
 
 # make folder to store screenshots
@@ -56,8 +56,15 @@ curl -fsSL https://get.pnpm.io/install.sh | sh -
 sudo pacman -S man-db man-pages
 sudo mandb
 
+# sddm theme
+wget https://github.com/catppuccin/sddm/releases/download/v1.1.2/catppuccin-mocha-flamingo-sddm.zip
+unzip catppuccin-mocha-flamingo-sddm.zip
+sudo mv -v catppuccin-mocha-flamingo /usr/share/sddm/themes
+echo "[Theme]
+Current=catppuccin-mocha-flamingo" | sudo tee /etc/sddm.conf
+
 # cleanup
-rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz
+rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz ~/catppuccin-mocha-flamingo-sddm.zip
 
 # enable sddm
 sudo systemctl enable sddm.service
