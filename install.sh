@@ -9,7 +9,7 @@ sudo pacman -S curl wget git vim base-devel
 cd ~ && sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
 # install a bunch of stuff
-sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh
+sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh less
 yay -S zen-browser-bin
 
 # make folder to store screenshots
@@ -53,7 +53,7 @@ nvm install 24
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # cleanup
-rm -rf ~/neovim ~/yay ~/themes.tar.gz
+rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz
 
 # enable sddm
 sudo systemctl enable sddm.service
