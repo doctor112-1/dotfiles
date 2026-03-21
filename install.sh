@@ -26,7 +26,7 @@ mkdir ~/.config/btop
 mv ~/themes ~/.config/btop
 
 # fonts
-sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono noto-fonts-emoji
+sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono
 
 # build and install neovim
 cd ~
