@@ -9,7 +9,7 @@ sudo pacman -S curl wget git vim base-devel
 cd ~ && sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
 # install a bunch of stuff
-sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh less wf-recorder go qt6-svg qt6-declarative qt5-quickcontrols2
+sudo pacman -S sddm stow hyprland hyprlock hyprpaper hypridle xdg-desktop-portal-hyprland hyprshot waybar rofi kitty starship keychain pipewire wireplumber pipewire-pulse brightnessctl playerctl swaync wl-clipboard ripgrep btop openssh less wf-recorder go qt6-svg qt6-declarative qt5-quickcontrols2 dns-over-https
 yay -S zen-browser-bin
 
 # make folder to store screenshots
@@ -69,6 +69,18 @@ unzip Pragmasevka_NF.zip
 sudo mkdir -p /usr/local/share/fonts/ttf/Pragmasevka
 sudo mv *.ttf /usr/local/share/fonts/ttf/Pragmasevka
 fc-cache
+
+# enable dns-over-https
+sudo systemctl enable doh-client.service
+
+# stop NetworkManager from updating resolv.conf
+echo "[main]
+dns=none" | sudo tee /etc/NetworkManager/conf.d/90-dns-none.conf
+sudo systemctl reload NetworkManager
+
+# update resolv.conf
+sudo rm /etc/resolv.conf
+echo "nameserver 127.0.0.1" | sudo tee /etc/resolv.conf
 
 # cleanup
 rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz ~/catppuccin-mocha-flamingo-sddm.zip ~/Pragmasevka_NF.zip
