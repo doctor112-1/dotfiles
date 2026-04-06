@@ -5,7 +5,6 @@ window#waybar {
 }
 
 #workspaces {
-  border-radius: 1rem;
   padding-right: 0.22rem;
   background-color: @base;
   font-family: "Pragmasevka Nerd Font";
@@ -31,7 +30,6 @@ window#waybar {
 }
 
 #custom-music {
-  margin: 5px;
   padding: 0.4rem;
   padding-right: 10px;
   background-color: @base;
@@ -39,12 +37,8 @@ window#waybar {
   font-family: "Pragmasevka Nerd Font";
   font-weight: bold;
 }
-
 .modules-left {
   background-color: @base;
-  border-radius: 1rem;
-  margin: 5px;
-  margin-left: 4px;
 }
 
 
@@ -53,17 +47,12 @@ window#waybar {
   font-family: "Pragmasevka Nerd Font";
   font-weight: bold;
   background-color: @base;
-  border-radius: 1rem;
-  margin: 5px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .modules-right {
   background-color: @base;
-  border-radius: 1rem;
-  margin: 5px;
-  margin-right: 4px;
 }
 
 #network {
@@ -89,7 +78,6 @@ window#waybar {
 tooltip {
   font-family: "Pragmasevka Nerd Font";
   font-weight: bold;
-  border-radius: 8px;
   padding: 15px;
   background-color: #131822;
 }
