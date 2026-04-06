@@ -10,7 +10,7 @@
   "hyprland/workspaces": {
     "disable-scroll": true,
     "sort-by-name": true,
-    "format": " {icon} ",
+    "format": "{name}",
     "format-icons": {
       "default": ""
     }
