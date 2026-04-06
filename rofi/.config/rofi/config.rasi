@@ -4,7 +4,7 @@
 configuration {
   display-drun: "apps: ";
   display-window: "search: ";
-  font: "Pragmasevka Nerd Font 15";
+  font: "Pragmasevka Nerd Font 17";
 }
 
 window {
@@ -16,11 +16,11 @@ inputbar {
 }
 
 prompt {
-  font: "Pragmasevka Nerd Font 16";
+  font: "Pragmasevka Nerd Font 17";
 }
 
 entry {
-  font: "Pragmasevka Nerd Font 16";
+  font: "Pragmasevka Nerd Font 17";
 }
 
 element {
