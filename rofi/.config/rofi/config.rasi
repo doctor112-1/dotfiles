@@ -4,7 +4,7 @@
 configuration {
   display-drun: "apps: ";
   display-window: "search: ";
-  font: "Jetbrains Mono 14";
+  font: "Pragmasevka Nerd Font 15";
 }
 
 window {
@@ -16,11 +16,11 @@ inputbar {
 }
 
 prompt {
-  font: "Jetbrains Mono 15";
+  font: "Pragmasevka Nerd Font 16";
 }
 
 entry {
-  font: "Jetbrains Mono 15";
+  font: "Pragmasevka Nerd Font 16";
 }
 
 element {
