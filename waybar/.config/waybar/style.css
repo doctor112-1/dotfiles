@@ -13,7 +13,8 @@ window#waybar {
 
 #workspaces button {
   color: @text;
-  padding: 0.4rem;
+  padding: 0.3rem;
+  padding-bottom: 0.2rem;
   border: 1px solid transparent;
 }
 
@@ -30,7 +31,6 @@ window#waybar {
 }
 
 #custom-music {
-  padding: 0.4rem;
   padding-right: 10px;
   background-color: @base;
   color: @text;
