@@ -1,0 +1,90 @@
+@import "mocha.css";
+
+window#waybar {
+  background-color: @base;
+}
+
+#workspaces {
+  padding-right: 0.22rem;
+  background-color: @base;
+  font-family: "Pragmasevka Nerd Font";
+  font-weight: bold;
+}
+
+#workspaces button {
+  color: @text;
+  padding: 0.4rem;
+  border: 1px solid transparent;
+}
+
+#workspaces button.active {
+  color: @lavender;
+}
+
+#workspaces button:hover {
+  color: @flamingo;
+  box-shadow: none;
+  text-shadow: none;
+  background: none;
+  transition: none;
+}
+
+#custom-music {
+  padding: 0.4rem;
+  padding-right: 10px;
+  background-color: @base;
+  color: @text;
+  font-family: "Pragmasevka Nerd Font";
+  font-weight: bold;
+}
+.modules-left {
+  background-color: @base;
+}
+
+
+#clock {
+  color: @text;
+  font-family: "Pragmasevka Nerd Font";
+  font-weight: bold;
+  background-color: @base;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.modules-right {
+  background-color: @base;
+}
+
+#network {
+  padding-right: 15px;
+  padding-left: 15px;
+  color: @text;
+}
+
+#wireplumber {
+  padding-right: 10px;
+  padding-left: 12px;
+  color: @text;
+}
+
+#battery {
+  padding-right: 15px;
+  padding-left: 10px;
+  color: @text;
+  font-family: "Pragmasevka Nerd Font";
+  font-weight: bold;
+}
+
+tooltip {
+  font-family: "Pragmasevka Nerd Font";
+  font-weight: bold;
+  padding: 15px;
+  background-color: #131822;
+}
+
+tooltip label {
+  font-family: "Pragmasevka Nerd Font";
+  font-weight: bold;
+  padding: 5px;
+  background-color: #131822;
+}

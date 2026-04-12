@@ -38,7 +38,23 @@ sudo make install
 
 # stow dotfiles
 cd ~/dotfiles
-stow hypridle hyprland backgrounds hyprlock hyprmocha hyprpaper kitty nvim rofi starship waybar
+stow hypridle hyprland backgrounds hyprlock hyprmocha kitty nvim rofi starship
+
+theme=$(cat theme)
+
+if [[ "$theme" = dark ]]; then
+  stow -D waybar-light
+  stow -D hyprpaper-light
+  stow waybar-dark hyprpaper-dark
+  echo "light" >theme
+fi
+
+if [[ "$theme" = light ]]; then
+  stow -D waybar-dark
+  stow -D hyprpaper-dark
+  stow waybar-light hyprpaper-light
+  echo "dark" >theme
+fi
 
 # setup .bashrc
 echo 'eval "$(starship init bash)"' >>~/.bashrc
