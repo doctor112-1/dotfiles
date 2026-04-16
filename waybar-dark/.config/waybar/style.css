@@ -22,7 +22,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  color: @flamingo;
+  color: @blue;
   box-shadow: none;
   text-shadow: none;
   background: none;
