@@ -8,6 +8,7 @@ window#waybar {
   border-radius: 1rem;
   padding-right: 0.22rem;
   background-color: @base;
+  font-size: 15px;
 }
 
 #workspaces button {
