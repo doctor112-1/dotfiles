@@ -35,7 +35,7 @@ window#waybar {
   padding-right: 10px;
   background-color: @base;
   color: @text;
-  font-family: "Pragmasevka Nerd Font";
+  font-family: "Jetbrains Mono Extra Bold";
 }
 
 .modules-left {
@@ -48,7 +48,7 @@ window#waybar {
 
 #clock {
   color: @text;
-  font-family: "Pragmasevka Nerd Font";
+  font-family: "Jetbrains Mono Extra Bold";
   background-color: @base;
   border-radius: 1rem;
   margin: 5px;
@@ -79,18 +79,18 @@ window#waybar {
   padding-right: 15px;
   padding-left: 10px;
   color: @text;
-  font-family: "Pragmasevka Nerd Font";
+  font-family: "Jetbrains Mono Extra Bold";
 }
 
 tooltip {
-  font-family: "Pragmasevka Nerd Font";
+  font-family: "Jetbrains Mono Extra Bold";
   border-radius: 8px;
   padding: 15px;
   background-color: #131822;
 }
 
 tooltip label {
-  font-family: "Pragmasevka Nerd Font";
+  font-family: "Jetbrains Mono Extra Bold";
   padding: 5px;
   background-color: #131822;
 }
