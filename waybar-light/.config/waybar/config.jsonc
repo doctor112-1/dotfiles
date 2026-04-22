@@ -19,7 +19,7 @@
     "interval": 1,
     "tooltip": false,
     "escape": true,
-    "exec": "playerctl metadata --format '{{ artist }} - {{ title }}'"
+    "exec": "if [[ ! \"$(playerctl metadata xesam:url)\" == *\"youtube\"* ]]; then playerctl metadata --format '{{ artist }} - {{ title }}'; fi"
   },
   "modules-center": [
     "clock"
