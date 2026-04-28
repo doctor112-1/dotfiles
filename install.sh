@@ -94,6 +94,9 @@ sudo systemctl reload NetworkManager
 sudo rm /etc/resolv.conf
 echo "nameserver 127.0.0.1" | sudo tee /etc/resolv.conf
 
+# set global git editor
+git config --global core.editor "nvim"
+
 # cleanup
 rm -rf ~/neovim ~/yay-bin ~/themes.tar.gz ~/catppuccin-mocha-flamingo-sddm.zip ~/Pragmasevka_NF.zip
 
