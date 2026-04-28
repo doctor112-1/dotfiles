@@ -1,12 +1,12 @@
 @import "mocha.css";
 
 window#waybar {
-  background-color: @mantle;
+  background-color: @base;
 }
 
 #workspaces {
   padding-right: 0.22rem;
-  background-color: @mantle;
+  background-color: @base;
   font-family: "Pragmasevka Nerd Font";
   font-weight: bold;
 }
@@ -32,13 +32,13 @@ window#waybar {
 #custom-music {
   padding: 0.4rem;
   padding-right: 10px;
-  background-color: @mantle;
+  background-color: @base;
   color: @text;
   font-family: "Pragmasevka Nerd Font";
   font-weight: bold;
 }
 .modules-left {
-  background-color: @mantle;
+  background-color: @base;
 }
 
 
@@ -46,13 +46,13 @@ window#waybar {
   color: @text;
   font-family: "Pragmasevka Nerd Font";
   font-weight: bold;
-  background-color: @mantle;
+  background-color: @base;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .modules-right {
-  background-color: @mantle;
+  background-color: @base;
 }
 
 #network {
