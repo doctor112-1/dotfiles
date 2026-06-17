@@ -1,0 +1,17 @@
+diff --git a/config.def.h b/config.def.h
+index 3ebb40b..df87d8b 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -1,8 +1,8 @@
+ static Clr colorname[4] = {
+-	[INIT]      = { 0x00000000, 0x00000000, 0x00000000 }, /* after initialization */
+-	[INPUT]     = { 0x00000000, 0x55555555, 0x77777777 }, /* during input */
+-	[INPUT_ALT] = { 0x00000000, 0x50505050, 0x70707070 }, /* during input, second color */
+-	[FAILED]    = { 0xcccccccc, 0x33333333, 0x33333333 }, /* wrong password */
++	[INIT]      = { 0x11111111, 0x11111111, 0x1b1b1b1b }, /* after initialization */
++	[INPUT]     = { 0x18181818, 0x18181818, 0x25252525 }, /* during input */
++	[INPUT_ALT] = { 0x1e1e1e1e, 0x1e1e1e1e, 0x2e2e2e2e }, /* during input, second color */
++	[FAILED]    = { 0xf3f3f3f3, 0x8b8b8b8b, 0xa8a8a8a8 }, /* wrong password */
+ };
+ 
+ /* treat a cleared input like a wrong password (color) */

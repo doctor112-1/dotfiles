@@ -1,0 +1,11 @@
+diff --git a/config.def.h b/config.def.h
+index 100093e..d3ac0dc 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -67,4 +67,6 @@ static const char unknown_str[] = "n/a";
+ static const struct arg args[] = {
+ 	/* function format          argument */
+ 	{ datetime, "%s",           "%F %T" },
++  { battery_perc, " %s%%", "BAT0" },
++  { run_command, " %s", "pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'" },
+ };
