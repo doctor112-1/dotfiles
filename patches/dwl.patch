@@ -12,7 +12,7 @@ index 578194f..279b1c0 100644
  LDLIBS    = `$(PKG_CONFIG) --libs $(PKGS)` $(WLR_LIBS) -lm $(LIBS)
  
 diff --git a/config.def.h b/config.def.h
-index 8a6eda0..56d442d 100644
+index 8a6eda0..80bc106 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -7,15 +7,21 @@
@@ -52,7 +52,7 @@ index 8a6eda0..56d442d 100644
  
  #define TAGKEYS(KEY,SKEY,TAG) \
  	{ MODKEY,                    KEY,            view,            {.ui = 1 << TAG} }, \
-@@ -116,13 +122,30 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
+@@ -116,13 +122,33 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
  
  /* commands */
  static const char *termcmd[] = { "foot", NULL };
@@ -68,6 +68,8 @@ index 8a6eda0..56d442d 100644
 +
 +static const char *brighnessup[] = { "brightnessctl", "s", "10%+", NULL };
 +static const char *brighnessdown[] = { "brightnessctl", "s", "10%-", NULL };
++
++static const char *playpause[] = { "playerctl", "play-pause", NULL };
  
  static const Key keys[] = {
  	/* Note that Shift changes certain key codes: 2 -> at, etc. */
@@ -82,11 +84,12 @@ index 8a6eda0..56d442d 100644
 +	{ 0,                         XKB_KEY_XF86AudioMute, spawn, {.v = mutevolume } },
 +	{ 0,                         XKB_KEY_XF86MonBrightnessUp, spawn, {.v = brighnessup } },
 +	{ 0,                         XKB_KEY_XF86MonBrightnessDown, spawn, {.v = brighnessdown } },
++	{ 0,                         XKB_KEY_XF86AudioPlay, spawn, {.v = playpause } },
 +	{ MODKEY,                    XKB_KEY_b,           togglebar,        {0} },
  	{ MODKEY,                    XKB_KEY_j,           focusstack,       {.i = +1} },
  	{ MODKEY,                    XKB_KEY_k,           focusstack,       {.i = -1} },
  	{ MODKEY,                    XKB_KEY_i,           incnmaster,       {.i = +1} },
-@@ -131,11 +154,11 @@ static const Key keys[] = {
+@@ -131,11 +157,11 @@ static const Key keys[] = {
  	{ MODKEY,                    XKB_KEY_l,           setmfact,         {.f = +0.05f} },
  	{ MODKEY,                    XKB_KEY_Return,      zoom,             {0} },
  	{ MODKEY,                    XKB_KEY_Tab,         view,             {0} },
@@ -100,7 +103,7 @@ index 8a6eda0..56d442d 100644
  	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_space,       togglefloating,   {0} },
  	{ MODKEY,                    XKB_KEY_e,           togglefullscreen, {0} },
  	{ MODKEY,                    XKB_KEY_0,           view,             {.ui = ~0} },
-@@ -166,7 +189,15 @@ static const Key keys[] = {
+@@ -166,7 +192,15 @@ static const Key keys[] = {
  };
  
  static const Button buttons[] = {
